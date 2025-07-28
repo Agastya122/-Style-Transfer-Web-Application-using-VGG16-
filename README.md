@@ -31,7 +31,7 @@ Image_Style_Transfer/
 
 # -Sample Output
 content Image:-
-![Stylized Result]([https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/stylized_result.jpg](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/edit/main/README.md))
+![content]([https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/stylized_result.jpg](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/edit/main/README.md))
 
 
 
