@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Style Transfer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="text-bg-dark p-4 text-center">
+        <h2>Neural Style Transfer</h2>
+    </div>
+    <div class="container mt-4">
+        <h5>Upload Content Image</h5>
+        <form method="POST" action="/upload" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" name="image" required>
+                <button type="submit" class="btn btn-outline-secondary">Upload</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <h5>Upload Style Image</h5>
+        <form method="POST" action="/styletransfer" enctype="multipart/form-data">
+            <div class="input-group mb-3">
+                <input type="file" class="form-control" name="style_image" required>
+                <button type="submit" class="btn btn-outline-secondary">Upload</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-4 d-flex justify-content-between">
+        {% if style_exists %}
+        <div>
+            <h6>Style Image</h6>
+            <img src="{{ url_for('static', filename='uploads/style.jpg') }}" class="img-fluid rounded w-100"
+                alt="Style Image">
+        </div>
+        {% endif %}
+
+        {% if content_exists %}
+        <div>
+            <h6>Content Image</h6>
+            <img src="{{ url_for('static', filename='uploads/content.jpg') }}" class="img-fluid rounded w-100"
+                alt="Content Image">
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="container text-center p-4">
+        <form method="POST" action="/transfer" enctype="multipart/form-data">
+            <button type="submit" class="btn btn-warning mt-4">Run Style Transfer</button>
+        </form>
+    </div>
+
+    <div class="container mt-4 text-center">
+        {% if output_exists %}
+        <h5>Stylized Output</h5>
+        <img src="{{ url_for('static', filename='stylized_result.jpg') }}" class="img-fluid rounded w-50"
+            alt="Stylized Image">
+        {% else %}
+        <p class="text-muted">No stylized image available yet.</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
