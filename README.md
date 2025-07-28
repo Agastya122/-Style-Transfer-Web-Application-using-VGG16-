@@ -30,8 +30,8 @@ Image_Style_Transfer/
 └── README.md                  # Project documentation
 
 # -Sample Output
-content Image:-
+Content Image:-
 ![Stylized Result](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/blob/main/content.jpg)
-
-
+Style Image :-
+![Stylized Result](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/blob/main/style.jpg)
 
