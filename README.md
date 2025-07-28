@@ -32,5 +32,6 @@ Image_Style_Transfer/
 # -Sample Output
 | Content Image                   | Style Image                   | Stylized Result                 |
 | ------------------------------- | ----------------------------- | ------------------------------- |
-| ![](static/uploads/content.jpg) | ![](static/uploads/style.jpg) | ![](static/stylized_result.jpg) |
+|![Result](https://raw.githubusercontent.com/username/repo-name/branch-name/images/output.jpg)
+  | ![](static/uploads/style.jpg) | ![](static/stylized_result.jpg) |
 
