@@ -30,8 +30,8 @@ Image_Style_Transfer/
 └── README.md                  # Project documentation
 
 # -Sample Output
-| Content Image                  | Style Image                    | Stylized Result                                                   |
-|-------------------------------|-------------------------------|-------------------------------------------------------------------|
-| ![](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/static/uploads/content.jpg) | ![](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/static/uploads/style.jpg) | ![](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/stylized_result.jpg) |
+content Image:-
+![Stylized Result]([https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/raw/main/stylized_result.jpg](https://github.com/Agastya122/-Style-Transfer-Web-Application-using-VGG16-/edit/main/README.md))
+
 
 
